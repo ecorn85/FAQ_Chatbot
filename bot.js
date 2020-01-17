@@ -11,6 +11,9 @@ const opts = {
   ]
 };
 
+//Read questions from FAQ.json
+
+
 // Create a client with our options
 const client = new tmi.client(opts);
 
