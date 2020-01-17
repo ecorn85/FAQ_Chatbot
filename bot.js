@@ -1,4 +1,5 @@
 const tmi = require('tmi.js');
+const fs = require('fs');
 
 // Define configuration options
 const opts = {
@@ -12,6 +13,8 @@ const opts = {
 };
 
 //Read questions from FAQ.json
+let rawQuestions = fs.readFileSync('FAQ.json');
+let questions = JSON.parse(rawQuestions);
 
 
 // Create a client with our options
