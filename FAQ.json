@@ -3,6 +3,7 @@
     {
       "question": "This is a test question",
       "isActive": true,
+      "reply": "this is a test reply",
       "phrases":[
         ["look","for","these","phrases","together"],
         ["or","these","ones"]
