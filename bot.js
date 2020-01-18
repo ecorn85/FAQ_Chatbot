@@ -14,7 +14,7 @@ const opts = {
 
 //Read questions from FAQ.json
 let rawFAQ = fs.readFileSync('FAQ.json');
-let FAQ = JSON.parse(rawQuestions);
+let FAQ = JSON.parse(rawFAQ);
 
 
 // Create a client with our options
@@ -33,11 +33,15 @@ function onMessageHandler (target, context, msg, self) {
 
   // Remove whitespace from chat message
   const commandName = msg.trim();
-
+  
+  //Iterate through each question from FAQ.json
+  FAQ.questions.forEach(function(question){
+    if(question.isActive){
+      let match = false;
+      
+    }
+  })
   // If the command is known, let's execute it
-   (let question in FAQ.questions){
-    
-  }
   /*
   if (commandName.includes("test")) {
     const num = rollDice(commandName);
