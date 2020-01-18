@@ -35,13 +35,15 @@ function onMessageHandler (target, context, msg, self) {
   const commandName = msg.trim();
 
   // If the command is known, let's execute it
+  
+  /*
   if (commandName.includes("test")) {
     const num = rollDice(commandName);
     client.say(target, `You rolled a ${num}. Link: https://glitch.com/~twitch-chatbot`);
     console.log(`* Executed ${commandName} command`);
   } else {
     console.log(`* Unknown command ${commandName}`);
-  }
+  }*/
 }
 
 // Function called when the "dice" command is issued
