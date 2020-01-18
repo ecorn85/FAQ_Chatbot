@@ -13,8 +13,8 @@ const opts = {
 };
 
 //Read questions from FAQ.json
-let rawQuestions = fs.readFileSync('FAQ.json');
-let questions = JSON.parse(rawQuestions);
+let rawFAQ = fs.readFileSync('FAQ.json');
+let FAQ = JSON.parse(rawQuestions);
 
 
 // Create a client with our options
@@ -35,7 +35,9 @@ function onMessageHandler (target, context, msg, self) {
   const commandName = msg.trim();
 
   // If the command is known, let's execute it
-  
+   (let question in FAQ.questions){
+    
+  }
   /*
   if (commandName.includes("test")) {
     const num = rollDice(commandName);
