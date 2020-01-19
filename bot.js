@@ -35,26 +35,35 @@ function onMessageHandler (target, context, msg, self) {
   const message = msg.trim().toLowerCase();
   
   //Iterate through each question from FAQ.json
-  FAQ.questions.forEach(function(question){
+  for(let question of FAQ.questions){
     //check question is active and the time since last response is greater than the answer frequency
     if(question.isActive){
       let match = false;
       //iterate through each set of phrases to respond to (OR statement)
-      question.keyPhraseSets.forEach(function(phraseSet){
+      for(let phraseSet of question.keyPhraseSets){
         let phraseMatch = true;
         //iterate through each phrase in a set (AND statement)
-        phraseSet.forEach(function(phrase){
-          //look for each phrase within the message, stop if cannot find phrase
+        for(let phrase of phraseSet){
+          //look for each phrase within the message, break if cannot find a phrase
           if(!message.contains(phrase)){
             phraseMatch = false;
             break;
           }
-        })
+        }
+        //stop searching if a phrase set matches
+        if(phraseMatch){
+          match = true;
+          break;
+        }
+          
+      }
+      //reply if matching phrase set found
+      if(phraseMatch){
         
-      })
-      
+      }
     }
-  })
+  }
+    
   // If the command is known, let's execute it
   /*
   if (commandName.includes("test")) {
