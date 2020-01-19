@@ -1,10 +1,10 @@
 {
-  "frequency": "00:00:30",
+  "frequency": 30,
   "questions": [
     {
       "question": "This is a test question for user identification. This phrase is not used.",
       "isActive": true,
-      "timestamp": "",
+      "timestamp": 0,
       "reply": "this is a test reply",
       "keyPhraseSets":[
         ["look","for","these","phrases","together"],

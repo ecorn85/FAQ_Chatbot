@@ -15,7 +15,9 @@ const opts = {
 //Read questions from FAQ.json
 let rawFAQ = fs.readFileSync('FAQ.json');
 let FAQ = JSON.parse(rawFAQ);
-const frequencyInMilliSec = FAQ.frequency * 1000;
+
+//frequency in sec converted to ms
+const frequencyInMS = FAQ.frequency * 1000;
 
 
 // Create a client with our options
