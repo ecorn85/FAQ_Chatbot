@@ -6,7 +6,7 @@
       "isActive": true,
       "timestamp": "",
       "reply": "this is a test reply",
-      "phrases":[
+      "keyPhraseSets":[
         ["look","for","these","phrases","together"],
         ["or","these","ones"]
       ]

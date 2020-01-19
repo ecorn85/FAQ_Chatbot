@@ -31,8 +31,8 @@ client.connect();
 function onMessageHandler (target, context, msg, self) {
   if (self) { return; } // Ignore messages from the bot
 
-  // Remove whitespace from chat message
-  const commandName = msg.trim();
+  // Remove whitespace from chat message and convert to lowercase
+  const message = msg.trim().toLowerCase();
   
   //Iterate through each question from FAQ.json
   FAQ.questions.forEach(function(question){
@@ -40,8 +40,15 @@ function onMessageHandler (target, context, msg, self) {
     if(question.isActive){
       let match = true;
       //iterate through each set of phrases to respond to (OR statement)
-      question.phrases.forEach(function(phrase){
-        //iterate through each 
+      question.keyPhraseSets.forEach(function(phraseSet){
+        //iterate through each phrase in a set (AND statement)
+        phraseSet.forEach(function(phrase){
+          //look for each phrase within the message
+          if(!message.contains(phrase)){
+             
+             }
+        })
+        
       })
       
     }
