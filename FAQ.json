@@ -1,8 +1,10 @@
 {
+  "frequency": "00:00:30",
   "questions": [
     {
-      "question": "This is a test question",
+      "question": "This is a test question for user identification. This phrase is not used.",
       "isActive": true,
+      "timestamp": "",
       "reply": "this is a test reply",
       "phrases":[
         ["look","for","these","phrases","together"],

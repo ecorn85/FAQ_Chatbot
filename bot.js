@@ -36,8 +36,13 @@ function onMessageHandler (target, context, msg, self) {
   
   //Iterate through each question from FAQ.json
   FAQ.questions.forEach(function(question){
+    //check question is active and the time since last response is greater than the answer frequency
     if(question.isActive){
-      let match = false;
+      let match = true;
+      //iterate through each set of phrases to respond to (OR statement)
+      question.phrases.forEach(function(phrase){
+        //iterate through each 
+      })
       
     }
   })
