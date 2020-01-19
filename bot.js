@@ -39,8 +39,9 @@ function onMessageHandler (target, context, msg, self) {
   
   //Iterate through each question from FAQ.json
   for(let question of FAQ.questions){
+    let currentTime = new Date(milliseconds);
     //check question is active and the time since last response is greater than the answer frequency
-    if(question.isActive){
+    if(question.isActive && (new Date(milliseconds) - question.timestamp > frequencyInMS)){
       let match = false;
       //iterate through each set of phrases to respond to (OR statement)
       for(let phraseSet of question.keyPhraseSets){
