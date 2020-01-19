@@ -58,7 +58,7 @@ function onMessageHandler (target, context, msg, self) {
           
       }
       //reply if matching phrase set found
-      if(phraseMatch){
+      if(match){
         
       }
     }
