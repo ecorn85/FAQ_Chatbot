@@ -38,15 +38,17 @@ function onMessageHandler (target, context, msg, self) {
   FAQ.questions.forEach(function(question){
     //check question is active and the time since last response is greater than the answer frequency
     if(question.isActive){
-      let match = true;
+      let match = false;
       //iterate through each set of phrases to respond to (OR statement)
       question.keyPhraseSets.forEach(function(phraseSet){
+        let phraseMatch = true;
         //iterate through each phrase in a set (AND statement)
         phraseSet.forEach(function(phrase){
-          //look for each phrase within the message
+          //look for each phrase within the message, stop if cannot find phrase
           if(!message.contains(phrase)){
-             
-             }
+            phraseMatch = false;
+            break;
+          }
         })
         
       })
