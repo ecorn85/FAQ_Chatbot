@@ -39,8 +39,9 @@ function onMessageHandler (target, context, msg, self) {
   
   //Iterate through each question from FAQ.json
   for(let question of FAQ.questions){
+    let currentTime = Date.now();
     //check question is active and the time since last response is greater than the answer frequency
-    if(question.isActive && Date.now() - question.timestamp > frequencyInMS){
+    if(question.isActive && currentTime - question.timestamp > frequencyInMS){
       let match = false;
       //iterate through each set of phrases to respond to (OR statement)
       for(let phraseSet of question.keyPhraseSets){
@@ -48,7 +49,7 @@ function onMessageHandler (target, context, msg, self) {
         //iterate through each phrase in a set (AND statement)
         for(let phrase of phraseSet){
           //look for each phrase within the message, break if cannot find a phrase
-          if(!message.contains(phrase)){
+          if(!message.includes(phrase)){
             phraseMatch = false;
             break;
           }
@@ -63,7 +64,8 @@ function onMessageHandler (target, context, msg, self) {
       //reply if matching phrase set found
       if(match){
         client.say(target, `@${self} ${question.reply}`);
-        console.log(`* Answered ${question.question} for ${self}`);
+        console.log(`* Answered ${question.question} at ${self}`);
+        console.log(`* Target: ${target} Context: ${context} Message: ${message} Self: ${self}`);
       }
     }
   }
