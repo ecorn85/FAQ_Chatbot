@@ -65,6 +65,8 @@ function onMessageHandler (target, context, msg, self) {
       if(match){
         client.say(target, `@$${question.reply}`);
         console.log(`* Answered ${question.question}`);
+        question.timestamp = currentTime;
+        JSON.writeFileSync()
       }
     }
   }
