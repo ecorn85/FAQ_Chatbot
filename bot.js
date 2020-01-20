@@ -79,13 +79,13 @@ function onMessageHandler (target, context, msg, self) {
     console.log(`* Unknown command ${commandName}`);
   }*/
 }
-
+/*
 // Function called when the "dice" command is issued
 function rollDice () {
   const sides = 20;
   return Math.floor(Math.random() * sides) + 1;
 }
-
+*/
 // Called every time the bot connects to Twitch chat
 function onConnectedHandler (addr, port) {
   console.log(`* Connected to ${addr}:${port}`);
