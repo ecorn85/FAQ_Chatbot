@@ -64,8 +64,7 @@ function onMessageHandler (target, context, msg, self) {
       //reply if matching phrase set found
       if(match){
         client.say(target, `@${self} ${question.reply}`);
-        console.log(`* Answered ${question.question} at ${self}`);
-        console.log(`* Target: ${target} Context: ${context} Message: ${message} Self: ${self}`);
+        console.log(`* Answered ${question.question}`);
       }
     }
   }
