@@ -12,8 +12,11 @@ const opts = {
   ]
 };
 
+//Define JSON file to read
+const jFile = "FAQ.json";
+
 //Read questions from FAQ.json
-let rawFAQ = fs.readFileSync('FAQ.json');
+let rawFAQ = fs.readFileSync(jFile);
 let FAQ = JSON.parse(rawFAQ);
 
 //frequency in sec converted to ms
@@ -66,7 +69,7 @@ function onMessageHandler (target, context, msg, self) {
         client.say(target, `@$${question.reply}`);
         console.log(`* Answered ${question.question}`);
         question.timestamp = currentTime;
-        JSON.writeFileSync()
+        JSON.writeFileSync(jFile, JSON.stringify(FAQ, null, 2));
       }
     }
   }
