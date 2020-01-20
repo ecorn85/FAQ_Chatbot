@@ -63,7 +63,7 @@ function onMessageHandler (target, context, msg, self) {
       }
       //reply if matching phrase set found
       if(match){
-        client.say(target, `@${self} ${question.reply}`);
+        client.say(target, `@$${question.reply}`);
         console.log(`* Answered ${question.question}`);
       }
     }
