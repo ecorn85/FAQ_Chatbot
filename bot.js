@@ -66,10 +66,10 @@ function onMessageHandler (target, context, msg, self) {
       }
       //reply if matching phrase set found
       if(match){
-        client.say(target, `@$${question.reply}`);
+        client.say(target, `${question.reply}`);
         console.log(`* Answered ${question.question}`);
         question.timestamp = currentTime;
-        fs.writeFileSync(jFile, JSON.stringify(FAQ, null, 2));
+        fs.writeFileSync(jFile, JSON.stringify(FAQ));
       }
     }
   }
