@@ -1,1 +1,25 @@
-{"frequency":30,"questions":[{"question":"This is a test question. The question is used for logs and user identification.","isActive":true,"timestamp":1579570224972,"reply":"this is a test reply","keyPhraseSets":[["look","for","these","phrases","together"],["or","these","ones"]]}]}
+{
+  "frequency": 30,
+  "questions": [
+    {
+      "question": "This is a test question. The question is used for logs and user identification.",
+      "isActive": true,
+      "timestamp": 1579571564667,
+      "reply": "this is a test reply",
+      "keyPhraseSets": [
+        [
+          "look",
+          "for",
+          "these",
+          "phrases",
+          "together"
+        ],
+        [
+          "or",
+          "these",
+          "ones"
+        ]
+      ]
+    }
+  ]
+}

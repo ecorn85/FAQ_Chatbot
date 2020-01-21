@@ -69,7 +69,7 @@ function onMessageHandler (target, context, msg, self) {
         client.say(target, `${question.reply}`);
         console.log(`* Answered ${question.question}`);
         question.timestamp = currentTime;
-        fs.writeFileSync(jFile, JSON.stringify(FAQ));
+        fs.writeFileSync(jFile, JSON.stringify(FAQ, null, 2));
       }
     }
   }
