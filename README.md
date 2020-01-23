@@ -3,22 +3,18 @@
 
 ## Chatbot Overview
 
-Twitch offers an Internet Relay Chat (IRC) interface for chat functionality. Chatbots allow you to programmatically interact with a Twitch chat feed using IRC standards; the bot connects to the Twitch IRC network as a client to perform these actions.This guide presents an easy bot example to get you started.
+The focus of this project is to create a chatbot that can automatically respond to commonly asked questions, or anything else that would deem an automatic reply. It does this by parsing messages and looking for matching phrases designated by the streamer/bot owner, and responding with a set message.
 
-### Building the Bot
+### Chatbot Base
 
-We’ll build a simple chatbot that responds in chat when someone types `!dice`. (This is known as a chatbot command.) When triggered, it randomly generates a number between 1-6. We run the fully-functioning chatbot on this Glitch,  as well as show you how to run locally on our [Developer Docs](https://dev.twitch.tv/docs/irc/).
+This chatbot is built upon Twitch's Chatbot tutorial. For more imformation, please look at the [Developer Docs](https://dev.twitch.tv/docs/irc/).
 
-![example-screenshot](https://cdn.glitch.com/1e2f7667-2601-49f0-af69-ba4f114185fe%2Fchatbots-1.png?1545680331607)
+The chatbot is built using Node.js and the Twitch Messaging Interface (TMI) library.
 
-
-
-### Get Environment Variables
+### Get Twitch Environment Variables
 
 To start, you’ll need three environment variables:
  
-| *Variable*  | *Description*   |
-|---|---|---|---|---|
 | `BOT_USERNAME`  |  The account (username) that the chatbot uses to send chat messages. This can be your Twitch account. Alternately, many developers choose to create a second Twitch account for their bot, so it's clear from whom the messages originate. |  
 |`CHANNEL_NAME`   |  The Twitch channel name where you want to run the bot. Usually this is your main Twitch account.
 |`OAUTH_TOKEN`   |The token to authenticate your chatbot with Twitch's servers. Generate this with [https://twitchapps.com/tmi/](https://twitchapps.com/tmi/) (a Twitch community-driven wrapper around the Twitch API), while logged in to your chatbot account. The token will be an alphanumeric string.|  
