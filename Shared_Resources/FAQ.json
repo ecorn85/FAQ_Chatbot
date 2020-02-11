@@ -1,0 +1,49 @@
+{
+  "channel": "test",
+  "questions": [
+    {
+      "id": 1,
+      "question": "This is a test question. The question is used for logs and user identification.",
+      "isActive": true,
+      "frequencyInSec": 30,
+      "timestamp": 1581280152678,
+      "reply": "this is a test reply",
+      "keyPhraseSets": [
+        [
+          "look",
+          "for",
+          "these",
+          "phrases",
+          "together"
+        ],
+        [
+          "or",
+          "these",
+          "ones"
+        ]
+      ]
+    },
+    {
+      "id": 2,
+      "question": "This is a second question. The question is used for logs and user identification.",
+      "isActive": false,
+      "frequencyInSec": 30,
+      "timestamp": 1579571564667,
+      "reply": "this is a test reply",
+      "keyPhraseSets": [
+        [
+          "look",
+          "for",
+          "these",
+          "phrases",
+          "together"
+        ],
+        [
+          "or",
+          "these",
+          "ones"
+        ]
+      ]
+    }
+  ]
+}
