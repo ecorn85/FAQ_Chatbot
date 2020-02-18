@@ -1,9 +1,13 @@
-# Twitch Getting Started with Chatbots & IRC
+# FAQ Chatbot
 =================
 
 ## Chatbot Overview
 
 The focus of this project is to create a chatbot that can automatically respond to commonly asked questions, or anything else that would deem an automatic reply. It does this by parsing messages and looking for matching phrases designated by the streamer/bot owner, and responding with a set message.
+
+There are two parts to this project:
+- The chatbot that connects to Twitch.
+- The management web app to modify what the chatbot is looking for.
 
 ### Chatbot Base
 
@@ -11,7 +15,13 @@ This chatbot is built upon Twitch's Chatbot tutorial. For more imformation, plea
 
 The chatbot is built using Node.js and the Twitch Messaging Interface (TMI) library.
 
-### Get Twitch Environment Variables
+The management app is built using .Net Core with an MVC framework.
+
+The parameters for the chatbot are stored in a JSON file.
+
+### Environment Setup
+
+### Connecting to Twitch
 
 To start, you’ll need three environment variables:
  
@@ -36,12 +46,5 @@ To start, you’ll need three environment variables:
 
 **Note**: This bot connects to the IRC network as a client and isn't designed to respond over HTTP. If you click "Show Live" you will see a simple "Hello World"
 
-
-## Next Steps
-
-* For a thorough understanding of Twitch chatbots and IRC, read the [Chatbots & IRC Guide](https://dev.twitch.tv/docs/irc/guide/) and the rest of the Twitch IRC documentation. 
-* To authenticate your chatbot in a production setting, we recommend you [register your app](https://dev.twitch.tv/docs/authentication/#registration) (chatbot) and use the OAuth Authorization code flow. This enables you to authenticate programmatically. To learn more, read the [Apps & Authentication Guide](https://dev.twitch.tv/docs/authentication/).
-Read [Chatbots & IRC documentation](https://dev.twitch.tv/docs/irc/guide/).
-* Reach out to [@twitchdev](https://twitter.com/twitchdev) or the [Twitch chatbot forum](https://discuss.dev.twitch.tv/c/chat) for help!
 
 
